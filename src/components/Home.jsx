@@ -31,13 +31,13 @@ render (){
        <>
         <div>
         <ul>
-                    {
+                    {/* {
                         this.state.album.map(a => (
                             <li  key={a.title}>
                               {JSON.stringify(a).slice(0, 50)}
                             </li>
                         ))
-                    }
+                    } */}
                 </ul>
             </div>
        </>

@@ -17,7 +17,7 @@ function App() {
                 <Home {...routerProps} subTitle="Homepage" />
               </Layout>
             )}/>
-<Layout/>
+
 </div>
 </Router>
   );

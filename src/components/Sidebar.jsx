@@ -1,4 +1,5 @@
 import { Row, Col } from "react-bootstrap"
+import { Link, withRouter } from 'react-router-dom'
 const Sidebar = () => {
   
  return (
@@ -13,6 +14,7 @@ const Sidebar = () => {
           </div>
           <ul>
             <li className="test">
+            <Link  to="/">
               <a href="home.html" className="position active">
                 <svg width="24" height="28" xmlns="http://www.w3.org/2000/svg" className="svg-icon">
                   <path d="M12 0L0 7.25581V24H8.93752V14.1563H15.0625V24H24V7.25581L12 0Z" fill="currentColor">
@@ -20,6 +22,7 @@ const Sidebar = () => {
                 </svg>
                 Home
               </a>
+              </Link>
             </li>
             <li className="test">
               <a hre="#" className="position">
@@ -106,4 +109,4 @@ const Sidebar = () => {
   </Row>
  )
 }
-export default Sidebar
+export default withRouter(Sidebar)

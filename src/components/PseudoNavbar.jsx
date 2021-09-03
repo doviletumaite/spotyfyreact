@@ -1,12 +1,14 @@
 import { Container, Button, Navbar } from "react-bootstrap";
+import { Link, withRouter } from 'react-router-dom'
 
-const PseudoNavbar = () => {
+const PseudoNavbar = ({ history, location, match }) => {
   return (
     <Container>
      <Navbar>
      <div className="nav-artist">
         <div className="main-scroll">
           <div className="arrows">
+         
             <Button type="button" className="btn btn-dark">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,6 +74,12 @@ const PseudoNavbar = () => {
             </Button>
           </div>
 
+<Link to="/album">
+<Button variant="dark" className={location.pathname === '/album' ? 'nav-link active' : 'nav-link'}>album</Button>
+</Link>
+<Link to="/artist">
+<Button variant="dark" className={location.pathname === '/artist' ? 'nav-link active' : 'nav-link'}>artist</Button>
+</Link>
           <Button
             className="navbar-toggler my-2 mx-3"
             type="button"
@@ -125,4 +133,4 @@ const PseudoNavbar = () => {
     </Container>
   );
 };
-export default PseudoNavbar;
+export default withRouter(PseudoNavbar);

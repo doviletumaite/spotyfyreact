@@ -11,7 +11,7 @@ const Layout = () => {
       </Col>
       <Col lg={9}>
         <PseudoNavbar />
-        <Home/>
+     
       </Col>
     </Row>
   );

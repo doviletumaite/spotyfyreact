@@ -3,7 +3,8 @@ import { Container, Row, InputGroup, Button } from "react-bootstrap";
 
 class Home extends Component {
 state = {
-    album: [""]
+    album: [],
+    isLoading: false,
 }
     getAlbum = async () => {
        try {
@@ -30,7 +31,7 @@ render (){
     return (
        <>
         <div>
-        <ul>
+        <ul> 
                     {/* {
                         this.state.album.map(a => (
                             <li  key={a.title}>

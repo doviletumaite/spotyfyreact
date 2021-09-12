@@ -1,5 +1,6 @@
-import { Container, Row, InputGroup, Button } from "react-bootstrap";
-import AlbumCard from "./AlbumCard";
+import { useEffect, useState } from "react";
+import getAlbum from "../../fetch/fetchAlbums";
+import AlbumCard from "../AlbumCard";
 
 const Home =  () => {
 //     const [album, setAlbum] = setState
@@ -27,21 +28,24 @@ const Home =  () => {
 //  componentDidMount = () => {
 // this.getAlbum()
 //  }
+
+    const [greenDay, setGreenDay] = useState([])
+    const [oliviaRodrigo, setOliviaRodrigo] = useState([])
+
+    useEffect(() => {
+      getAlbum("green day").then((response)=> setGreenDay(response))
+      getAlbum("olivia rodrigo").then((response)=> setOliviaRodrigo(response))
+    }, [])
+
     return (
-       <>
+   
         <div>
-            <AlbumCard/>
-        <ul> 
-                    {/* {
-                        this.state.album.map(a => (
-                            <li  key={a.title}>
-                              {JSON.stringify(a).slice(0, 50)}
-                            </li>
-                        ))
-                    } */}
-                </ul>
+            <h2>Upper section</h2>
+            {greenDay && greenDay.slice(0, 4).map((album)=> <AlbumCard src={album.album.cover_medium} key={album.id}/>)}
+            <AlbumCard />
+            <h2>Down section</h2>
             </div>
-       </>
+    
     )
 
 };

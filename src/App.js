@@ -1,25 +1,19 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from './components/Layout';
-import AlbumPage from "./components/AlbumPage"
-import ArtistPage from "./components/ArtistPage"
+import AlbumPage from "./components/pages/AlbumPage"
+import ArtistPage from "./components/pages/ArtistPage"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
+import Home from './components/pages/Home';
 
 function App() {
   return (
     <Router>
     <div className="App">
 <Switch>
-    <Route
-            path="/"
-            exact
-            render={(routerProps) => (
-              <Layout>
-                <Home {...routerProps} subTitle="HomePage" />
-              </Layout>
-            )}/>
-
+        <Layout>
+         <Route exact path='/' component={Home}/>
+         </Layout>
 <Route
             path="/album"
             exact

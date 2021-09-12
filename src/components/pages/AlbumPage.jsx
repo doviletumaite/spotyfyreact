@@ -1,4 +1,4 @@
-import AlbumCard from "./AlbumCard"
+import AlbumCard from "../AlbumCard"
 
 const AlbumPage = () => {
     return(

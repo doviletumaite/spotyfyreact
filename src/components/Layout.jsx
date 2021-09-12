@@ -1,5 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 import Home from "./Home";
+import Player from "./Player";
 import PseudoNavbar from "./PseudoNavbar";
 import Sidebar from "./Sidebar";
 
@@ -13,7 +14,9 @@ const Layout = () => {
         <PseudoNavbar />
         <Home/>
       </Col>
-    </Row>
+     <Player/>
+    </Row> 
+    
   );
 };
 export default Layout;

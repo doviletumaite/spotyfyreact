@@ -1,5 +1,6 @@
 import { Row, Col } from "react-bootstrap"
 import { Link, withRouter } from 'react-router-dom'
+import "./sidebar.css"
 const Sidebar = () => {
   
  return (

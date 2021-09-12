@@ -1,4 +1,5 @@
 import { Component } from "react";
+import "./albumCard.css"
 class AlbumCard extends Component {
     state = {
         album: []

@@ -1,30 +1,28 @@
 import { useEffect, useState } from "react";
-import getAlbum from "../../fetch/fetchAlbums";
-import AlbumCard from "../AlbumCard";
+import getAlbum from "../../fetch/fetchAlbums.js";
+import AlbumCard from "../AlbumCard.jsx";
 
 const Home =  () => {
-//     const [album, setAlbum] = setState
+    const [album, setAlbum] = useState([])
 // state = {
 //     album: [],
 //     isLoading: false,
 // }
-//     getAlbum = async () => {
-//        try {
-//            const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=whatever")
-//            if (response.ok){
-//                let album = await response.json()
-//                this.setState({
-//                 album
-//             })
-//                console.log("albums", album)
-//            } else {
-//             throw new Error("Couldnt fetch data");
-//            }
-//        } catch (error) {
-//         console.log(error);
-// 		throw error;
-//        }
-//    }
+  //   getAlbum = async () => {
+  //      try {
+  //          const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=whatever")
+  //          if (response.ok){
+  //              let album = await response.json()
+  //              setAlbum(album)
+  //              console.log("albums", album)
+  //          } else {
+  //           throw new Error("Couldnt fetch data");
+  //          }
+  //      } catch (error) {
+  //       console.log(error);
+	// 	throw error;
+  //      }
+  //  }
 //  componentDidMount = () => {
 // this.getAlbum()
 //  }
@@ -35,6 +33,7 @@ const Home =  () => {
     useEffect(() => {
       getAlbum("green day").then((response)=> setGreenDay(response))
       getAlbum("olivia rodrigo").then((response)=> setOliviaRodrigo(response))
+      // getAlbum()
     }, [])
 
     return (

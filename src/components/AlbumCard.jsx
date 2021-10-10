@@ -1,4 +1,4 @@
-import { Component } from "react";
+
 import "./albumCard.css"
 const AlbumCard = (props) => {
 

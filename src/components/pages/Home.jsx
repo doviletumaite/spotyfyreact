@@ -4,28 +4,7 @@ import AlbumCard from "../AlbumCard.jsx";
 
 const Home =  () => {
     const [album, setAlbum] = useState([])
-state = {
-    album: [],
-    isLoading: false,
-}
-    getAlbum = async () => {
-       try {
-           const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=whatever")
-           if (response.ok){
-               let album = await response.json()
-               setAlbum(album)
-               console.log("albums", album)
-           } else {
-            throw new Error("Couldnt fetch data");
-           }
-       } catch (error) {
-        console.log(error);
-		throw error;
-       }
-   }
- componentDidMount = () => {
-this.getAlbum()
- }
+
 
     const [greenDay, setGreenDay] = useState([])
     const [oliviaRodrigo, setOliviaRodrigo] = useState([])
